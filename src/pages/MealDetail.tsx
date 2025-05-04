@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
   ArrowRight, 
@@ -152,11 +152,6 @@ const MealDetail = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Force scroll to top whenever the component mounts or id changes
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
-
   // Find the meal with the matching ID
   const meal = meals.find(meal => meal.id === id);
   
@@ -247,7 +242,6 @@ const MealDetail = () => {
               className="w-full h-full object-cover rounded-xl"
               style={{ maxHeight: '500px' }}
               onError={() => setImageError(true)}
-              loading="lazy"
             />
             <button
               onClick={() => setIsLiked(!isLiked)}

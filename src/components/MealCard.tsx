@@ -53,7 +53,6 @@ const MealCard = ({
                 isHovered ? "scale-110" : "scale-100"
               )}
               onError={() => setImageError(true)}
-              loading="lazy"
             />
           </AspectRatio>
           <div 
