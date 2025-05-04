@@ -48,7 +48,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex items-center space-x-4">
           {[
             { name: 'الرئيسية', path: '/' },
             { name: 'الوجبات', path: '/#الوجبات' },
@@ -64,7 +64,7 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <Link to="/cart" className="relative">
+          <Link to="/cart" className="relative ms-4">
             <ShoppingCart className="h-6 w-6 text-sand-900 hover:text-terracotta-500 transition-colors duration-300" />
             <span className="absolute -top-2 -right-2 bg-terracotta-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
               0
