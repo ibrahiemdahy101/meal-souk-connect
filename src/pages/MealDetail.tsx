@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
@@ -76,7 +75,7 @@ const meals = [
     name: 'Stuffed Pigeon',
     arabicName: 'حمام محشي',
     description: 'حمام محشي بالفريك والأرز المتبل بالبهارات المصرية الأصيلة',
-    longDescription: 'الحمام المحشي من أشهى الأطباق المصرية الفاخرة. يتم تنظيف الحمام جيدًا ثم حشوه بخليط الفريك أو الأرز المتبل بالبهارات والمكسرات. يطهى الحمام في مرق غني بالتوابل المصرية التقليدية حتى ينضج تمامًا. يقدم ساخنًا مع المحشي بداخله، ويعتبر من الأطباق المميزة في المناسبات والولائم في مصر.',
+    longDescription: 'الحمام المحشي من أشهى الأطباق المصرية الفاخرة. يتم تنظيف الحمام جيدًا ثم حشوه بخليط الفريك أو الأرز المتبل بالبهارات وا��مكسرات. يطهى الحمام في مرق غني بالتوابل المصرية التقليدية حتى ينضج تمامًا. يقدم ساخنًا مع المحشي بداخله، ويعتبر من الأطباق المميزة في المناسبات والولائم في مصر.',
     price: 85,
     image: 'https://images.unsplash.com/photo-1594221708779-94832f4320ff?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3',
     chef: 'الشيف سامي',
@@ -153,7 +152,7 @@ const MealDetail = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Set scroll position to top when component mounts or id changes
+  // Force scroll to top whenever the component mounts or id changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
