@@ -27,6 +27,7 @@ import {
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { cn } from '@/lib/utils';
+import { ScrollArea } from '@/components/ui/scroll-area';
 
 // Sample data for meals - in a real app this would come from a database
 const meals = [
@@ -152,7 +153,7 @@ const MealDetail = () => {
   const [isLiked, setIsLiked] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  // Scroll to top when component mounts or id changes
+  // Set scroll position to top when component mounts or id changes
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [id]);
