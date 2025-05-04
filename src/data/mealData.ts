@@ -1,0 +1,48 @@
+
+// Sample data for meals
+export const mealData = [
+  {
+    id: 'm1',
+    name: 'Koshari',
+    arabicName: 'كشري',
+    description: 'طبق شعبي مصري أصيل من الأرز والمكرونة والعدس مع صلصة الطماطم والبصل المقرمش',
+    price: 35,
+    image: 'https://images.unsplash.com/photo-1585937421612-70a008356c36?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.0.3',
+    chef: 'أم أحمد',
+    tags: ['شعبي', 'نباتي'],
+    rating: 4.8,
+  },
+  {
+    id: 'm2',
+    name: 'Molokhia with Rabbit',
+    arabicName: 'ملوخية بالأرانب',
+    description: 'ملوخية مصرية تقليدية طازجة مع أرانب مشوية ومطهوة على الفحم مع الأرز',
+    price: 70,
+    image: 'https://images.unsplash.com/photo-1676037150304-e4c4a1d585e7?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.0.3',
+    chef: 'الحاج محمود',
+    tags: ['تقليدي', 'لحوم'],
+    rating: 4.9,
+  },
+  {
+    id: 'm3',
+    name: 'Stuffed Pigeon',
+    arabicName: 'حمام محشي',
+    description: 'حمام محشي بالفريك والأرز المتبل بالبهارات المصرية الأصيلة',
+    price: 85,
+    image: 'https://images.unsplash.com/photo-1679233788340-204e08432070?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.0.3',
+    chef: 'الشيف سامي',
+    tags: ['فاخر', 'تقليدي'],
+    rating: 4.7,
+  },
+  {
+    id: 'm4',
+    name: 'Ful Medames',
+    arabicName: 'فول مدمس',
+    description: 'فول مدمس مصري بزيت الزيتون والليمون والكمون والثوم مع الخبز البلدي',
+    price: 25,
+    image: 'https://images.unsplash.com/photo-1626109847257-8b94aad99dcd?q=80&w=714&auto=format&fit=crop&ixlib=rb-4.0.3',
+    chef: 'أم محمد',
+    tags: ['إفطار', 'نباتي'],
+    rating: 4.6,
+  },
+];

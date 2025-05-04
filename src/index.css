@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Noto+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 30% 98%;
+    --foreground: 36 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 36 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 36 10% 15%;
+
+    --primary: 36 50% 60%;
+    --primary-foreground: 36 10% 15%;
+
+    --secondary: 60 33% 95%;
+    --secondary-foreground: 36 10% 15%;
+
+    --muted: 36 10% 95%;
+    --muted-foreground: 36 5% 45%;
+
+    --accent: 36 70% 95%;
+    --accent-foreground: 36 10% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 36 10% 98%;
+
+    --border: 36 10% 90%;
+    --input: 36 10% 90%;
+    --ring: 36 50% 60%;
+
+    --radius: 0.5rem;
+  }
+  
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif tracking-tight;
+  }
+  
+  .arabic {
+    @apply font-arabic;
+  }
+  
+  .section {
+    @apply py-16 md:py-24;
+  }
+  
+  .container {
+    @apply px-4 md:px-6 mx-auto max-w-7xl;
+  }
+}
+
+@layer components {
+  .fade-in-section {
+    @apply opacity-0 transition-all duration-700 ease-out transform translate-y-8;
+  }
+  
+  .fade-in-section.is-visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-terracotta-500 text-white rounded-full px-6 py-3 font-medium transition-all duration-300 hover:bg-terracotta-600 hover:shadow-md;
+  }
+  
+  .btn-secondary {
+    @apply bg-sand-100 text-sand-800 rounded-full px-6 py-3 font-medium transition-all duration-300 hover:bg-sand-200 hover:text-sand-900;
+  }
+  
+  .image-glow {
+    @apply relative;
+  }
+  
+  .image-glow::after {
+    @apply content-[''] absolute inset-0 rounded-lg opacity-0 transition-opacity duration-300 bg-gradient-to-b from-transparent to-sand-200/40;
+  }
+  
+  .image-glow:hover::after {
+    @apply opacity-100;
+  }
+}
