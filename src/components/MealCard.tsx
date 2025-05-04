@@ -34,6 +34,9 @@ const MealCard = ({
 
   // Fallback image if the original fails to load
   const fallbackImage = "/placeholder.svg";
+  
+  // Force image to be loaded from the URL directly rather than as a module
+  const imageUrl = image.startsWith('http') ? image : image;
 
   return (
     <div 
@@ -46,7 +49,7 @@ const MealCard = ({
         <div className="relative overflow-hidden">
           <AspectRatio ratio={4/3}>
             <img
-              src={imageError ? fallbackImage : image}
+              src={imageError ? fallbackImage : imageUrl}
               alt={name}
               className={cn(
                 "w-full h-full object-cover transition-transform duration-700",
